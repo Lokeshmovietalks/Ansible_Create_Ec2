@@ -6,11 +6,11 @@
     access_key: "{{access_key}}"
     aws_secret_access_key: "{{aws_secret_access_key}}"
     name: "public-compute-instance"
-    key_name: "Dev"
+    key_name: "Dev"                            #provide key pair name
     region: ap-southeast-2                     #provide region
     vpc_subnet_id: subnet-04f719b8a70e575a3    #provide Subnet ID
     instance_type: t2.micro
-    security_group: sg-0e0a6a111d6dbc4de
+    security_group: sg-0e0a6a111d6dbc4de       #provide securitygroup id of region
     network_interfaces:
       - assign_public_ip: true
     image_id: ami-051821c6674233b27
