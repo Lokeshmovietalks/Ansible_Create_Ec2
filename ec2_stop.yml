@@ -5,5 +5,5 @@
   become: true
   tasks:
     - name: stop the instance
-      shell: start now
+      shell: shutdown now
       when: ansible_facts['os_family'] == "Debian"
