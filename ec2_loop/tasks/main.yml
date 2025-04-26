@@ -17,4 +17,4 @@
   loop:
     -  {name: "Managenode1", image: "ami-051821c6674233b27"}
     -  {name: "Managenode2", image: "ami-051821c6674233b27"}
-    -  {name: "Managenode3", image: "ami-0c237403f20a6f4db"}
+    -  {name: "Managenode3", image: "ami-0f6ad74deb85f4b89"}
