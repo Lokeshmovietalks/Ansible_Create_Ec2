@@ -14,7 +14,7 @@
     network_interfaces:
       - assign_public_ip: true
     image_id: "{{item.image}}"
-    loop:
-      -  {name: "Managenode1", image: "ami-051821c6674233b27"}
-      -  {name: "Managenode2", image: "ami-051821c6674233b27"}
-      -  {name: "Managenode3", image: "ami-0c237403f20a6f4db"}
+  loop:
+    -  {name: "Managenode1", image: "ami-051821c6674233b27"}
+    -  {name: "Managenode2", image: "ami-051821c6674233b27"}
+    -  {name: "Managenode3", image: "ami-0c237403f20a6f4db"}
