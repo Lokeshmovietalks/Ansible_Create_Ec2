@@ -1,2 +1,20 @@
 ---
-# tasks file for ec2_loop
+
+
+- name: start an instance with a public IP address
+  amazon.aws.ec2_instance:
+    access_key: "{{access_key}}"
+    aws_secret_access_key: "{{aws_secret_access_key}}"
+    name: "{{item.name}}"
+    key_name: "Dev"                            #provide key pair name
+    region: "{{region}}"                     #provide region
+    vpc_subnet_id: "{{vpc_subnet_id}}"    #provide Subnet ID
+    instance_type: "{{instance_type}}"
+    security_group: "{{security_group}}"   #provide security group id of region
+    network_interfaces:
+      - assign_public_ip: true
+    image_id: "{{item.image}}"
+    loop:
+      - {name: 'Managenode1' image: 'ami-051821c6674233b27'}
+      - {name: 'Managenode2' image: 'ami-051821c6674233b27'}
+      - {name: 'Managenode3' image: 'ami-0c237403f20a6f4db'}

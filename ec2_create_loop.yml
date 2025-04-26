@@ -1,0 +1,6 @@
+---
+- name: Create different Ec2 instances
+  hosts: localhost
+  become: true
+  roles:
+    - ec2_loop
