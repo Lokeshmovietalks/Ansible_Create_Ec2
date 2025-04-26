@@ -18,3 +18,4 @@
     -  {name: "Managenode1", image: "ami-051821c6674233b27"}
     -  {name: "Managenode2", image: "ami-051821c6674233b27"}
     -  {name: "Managenode3", image: "ami-0f6a1a6507c55c9a8"}
+  when: item.name == "Managenode3"
