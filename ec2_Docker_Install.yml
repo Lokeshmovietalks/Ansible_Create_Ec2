@@ -14,7 +14,8 @@
       shell: docker --version
       register: docker_installed
       ignore_errors: yes
-- ansible.bultin.debug:
+    - ansible.builtin.debug:
         var: docker_installed
+
         
 
