@@ -13,7 +13,8 @@
     - name: Check if docker is installed
       shell: docker --version
       register: docker_installed
-      ignore_errors: yes
     - ansible.bultin.debug:
         var: docker_installed
+      ignore_errors: yes
+        
 
