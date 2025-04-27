@@ -10,5 +10,5 @@
       loop:
         - openssh-server
         - openssl
-    -name: Check if docker is installed
+    - name: Check if docker is installed
       shell: docker --version
