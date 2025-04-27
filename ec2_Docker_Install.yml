@@ -1,0 +1,14 @@
+---
+- name: Check and install docker
+  hosts: app
+  become: true
+  tasks:
+    -name: Check if openssh and opensll is installed
+      package:
+        name: "{{item}}"
+        state: present
+      loop:
+        - openssh-server
+        - openssl
+    -name: Check if docker is installed
+      shell: docker --version
