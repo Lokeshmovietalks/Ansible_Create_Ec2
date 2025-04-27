@@ -17,9 +17,8 @@
     - ansible.builtin.debug:
         var: docker_installed
     - name: Install Docker
-      package:
-        name: docker.io
-        state: present
+      shell: 
+        sudo yum install docker -y
       when: docker_installed is failed
     - name: check docker version
       shell: docker --version
