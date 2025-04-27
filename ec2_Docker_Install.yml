@@ -12,6 +12,6 @@
         - openssl
     - name: Check if docker is installed
       shell: docker --version
-      ignore_error: yes
+      ignore_errors: yes
     - name: Check git version
       shell: git --version 
