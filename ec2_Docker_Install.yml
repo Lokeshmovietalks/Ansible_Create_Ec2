@@ -12,6 +12,8 @@
         - openssl
     - name: Check if docker is installed
       shell: docker --version
+      register: docker_installed
       ignore_errors: yes
-    - name: Check git version
-      shell: git --version 
+    - ansible.bultin.debug:
+        var: docker_installed
+
