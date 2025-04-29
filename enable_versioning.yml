@@ -1,0 +1,8 @@
+---
+- name: Enable Versioning for S3
+  hosts: localhost
+  become: true
+  tasks:
+    - name: List the buckets
+      amazon.aws.s3_bucket_info:
+      register: result
